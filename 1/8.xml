@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<cinema>
+    <address>София, бул. Черни връх 100, в сградата на Paradise Center</address>
+    <phone>02 903 74 74</phone>
+    <email>info.paradise@cinemacity.bg</email>
+    <prices>
+        <monday>7.80</monday>
+        <tuesday>8.00</tuesday>
+        <wednesday>7.80</wednesday>
+        <thursday>8.00</thursday>
+        <friday>7.80</friday>
+        <saturday>8.00</saturday>
+        <sunday>6.00</sunday>
+    </prices>
+    <movie name="Цар Лъв">
+        <showing date="2 октомври (сряда)">
+            <times>13:50</times>
+            <times>15:50</times>
+        </showing>
+        <showing date="3 октомври (четвъртък)">
+            <times>13:50</times>
+            <times>15:50</times>
+        </showing>
+        <showing date="4 октомври (петък)">
+            <times>13:50</times>
+            <times>15:50</times>
+        </showing>
+    </movie>
+</cinema>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<root xmlns:records="foo.bar">
+    <records:book>
+        <title>A true story</title>
+        <description>A real cool publication</description>
+    </records:book> 
+    <persons:record  xmlns:persons = "foo.bar">
+        <name>Miller</name>
+        <title>Dr. </title>
+        <publications> ... </publications>
+    </persons:record> 
+</root>

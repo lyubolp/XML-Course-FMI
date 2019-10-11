@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<content author = "2017author">
+    <name>Бисквитена торта</name>
+    <author>Анонимен</author>
+    <address>
+        <site>
+            www.recipes.com
+        </site>
+    </address>
+    <ingredients>
+    <list>
+        <item amount = "1" weight = "10">1 пакет бисквити </item>
+        <item amount = "1" weight = "10">1 кофичка кисело мляко </item>
+        <item amount = "1" weight = "10">1 бурканче сладко </item>
+        <item amount = "1" weight = "10">1 шоколад </item>
+        <item amount = "1" weight = "10">1 лъжичка захар </item>
+    </list>
+    </ingredients>
+    <process>
+        <p>Разбъркваме млякото и сладкото. Един ред бисквити, един ред от сместа и пак така, най-отгоре поръсваме орехи. Изчаква се до омекване на бисквитите.</p>
+        <p><i>Много вкусно!</i></p>
+    </process>
+    <images>
+        <image src="alabala.jpg"/>
+        <image src="alabala2.jpg"/>
+    </images>
+</content>

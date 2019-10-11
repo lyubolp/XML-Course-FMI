@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<table>
+    <condition>
+        <item index="1" data="Equal to"/> 
+        <item index="2" data="Not equal to"/> 
+        <item index="3" data="Greater than"/> 
+        <item index="4" data="Less than"/> 
+        <item index="5" data="Greater than or equal to"/> 
+        <item index="6" data="Less than or equal to"/> 
+    </condition>
+
+    <operator>
+        <item index="1">
+            =
+        </item> 
+        <item index="2">
+            &lt;&gt;
+        </item> 
+        <item index="3">
+            &gt;
+        </item> 
+        <item index="4">
+            &lt;
+        </item> 
+        <item index="5">
+            &gt;=
+        </item> 
+        <item index="6">
+            &lt;=
+        </item> 
+    </operator>
+
+    <formula_example>
+        <item index="1">
+            <![CDATA[=A1=B1]]>
+        </item> 
+        <item index="2">
+            <![CDATA[=A1<>B1]]>
+        </item> 
+        <item index="3">
+            <![CDATA[=A1>B1]]>
+        </item> 
+        <item index="4">
+            <![CDATA[=A1<B1]]>
+        </item> 
+        <item index="5">
+            <![CDATA[=A1>=B1]]>
+        </item> 
+        <item index="6">
+            <![CDATA[=A1<=B1]]>
+        </item> 
+    </formula_example>
+
+    <description>
+        <item index="1" data="Equal to"/> 
+        <item index="2" data="Not equal to"/> 
+        <item index="3" data="Greater than"/> 
+        <item index="4" data="Less than"/> 
+        <item index="5" data="Greater than or equal to"/> 
+        <item index="6" data="Less than or equal to"/>
+    </description>
+
+</table>
