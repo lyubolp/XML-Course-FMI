@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE channel[
+<!ELEMENT channel (item+, %title, link, image*, language*, description)>
+<!ELEMENT item ((%title, link_image ENTITY, description*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT image (%title, link, url) >
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+
+<!ATTLIST channel version CDATA #REQUIRED>
+
+<!NOTATION gif SYSTEM "image/gif">
+<!NOTATION png Public "image/png">
+<!ENTITY gifs SYSTEM "something.gif" NDATA gif>
+<!ENTITY pngs SYSTEM "something.png" NDATA png>
+
+<!ENTITY link "image_link">
+
+<!ENTITY % title "some_title">
+]>
