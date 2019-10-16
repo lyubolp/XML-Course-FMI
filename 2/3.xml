@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+<!DOCTYPE Course_Catalog[
 <!ELEMENT Chair (Professor)>
 <!ELEMENT Title (#PCDATA)>
 <!ELEMENT Course (Title, Description?, Instructors, Prerequisites?)>
@@ -19,13 +20,35 @@ Enrollment (1070 | 110 | 130 | 180 | 280 | 320 | 500 | 60 | 620 | 90) #IMPLIED
 <!ELEMENT Prerequisites (Prereq+)>
 <!ELEMENT Course_Catalog (Department+)>
 <!ELEMENT Middle_Initial (#PCDATA)> 
+]>
 
-<Chair>
-    <Professor></Professor>
-    
-    <Course>
-        <Title> </Title>
-        <Description> </Description>
-        <Instructors> </Instructors>
-    </Course>
-</Chair>
+<Course_Catalog>
+    <Department Code="CS">
+        <Title></Title>
+        <Chair>
+        <Professor>
+                        <First_Name></First_Name>
+                        <Last_Name></Last_Name>
+                    </Professor>
+        </Chair>
+            <Course Number="CS106B" Enrollment="1070">
+                <Title>
+                </Title>
+                <Instructors> 
+                    <Lecturer>
+                        <First_Name></First_Name>
+                        <Last_Name></Last_Name>
+                    </Lecturer>
+                    <Professor>
+                        <First_Name></First_Name>
+                        <Last_Name></Last_Name>
+                    </Professor>
+                    <Professor>
+                        <First_Name></First_Name>
+                        <Last_Name></Last_Name>
+                    </Professor>
+                </Instructors>
+            </Course>
+        
+    </Department>
+</Course_Catalog>
