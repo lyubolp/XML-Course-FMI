@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="minBalance">
+        <xs:restriction base="xs:negativeInteger">
+            <xs:minInclusive value="-5000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="maxBalance">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="5000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+   <xs:element name="bank">
+       <xs:complexType>
+           <xs:all>
+               <xs:element name="accounts" minOccurs="1">
+                   <xs:complexType>
+                       <xs:all>
+                           <xs:element ref="saving_accounts"/>
+                           <xs:element ref="checking_accounts"/>
+                       </xs:all>
+                   </xs:complexType>
+               </xs:element>
+               <xs:element ref="customers" minOccurs="1"/>
+               <xs:element ref="customer_accounts" minOccurs="1"/>
+           </xs:all>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="name" type="xs:string"/>
+   <xs:element name="address" type="xs:string"/>
+   <xs:element name="balance">
+       <xs:simpleType>
+        <xs:union memberTypes="minBalance maxBalance"/> 
+       </xs:simpleType>
+   </xs:element>
+   <xs:element name="customer">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="name"/>
+               <xs:element ref="address"/>
+           </xs:sequence>
+           <xs:attribute name="id" use="required" type="xs:ID"/>
+       </xs:complexType>
+   </xs:element>
+   <xs:complexType name="customers">
+       <xs:sequence>
+           <xs:element ref="customer" maxOccurs="unbounded"/>
+       </xs:sequence>
+   </xs:complexType>
+   <xs:element name="customers" type="customers"/>
+   <xs:element name="saving_account">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="balance"/>
+           </xs:sequence>
+           <xs:attribute name="id" use="required" type="xs:ID"/>
+           <xs:attribute name="interest" type="xs:decimal"/>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="checking_account">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="balance"/>
+           </xs:sequence>
+           <xs:attribute name="id" use="required" type="xs:ID"/>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="customer_account">
+       <xs:complexType>
+           <xs:attribute name="c_id" use="required" type="xs:IDREF"/>
+           <xs:attribute name="ac_id" use="required" type="xs:IDREF"/>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="saving_accounts">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="saving_account" maxOccurs="unbounded"/>
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="checking_accounts">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="checking_account" maxOccurs="unbounded"/>
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+   <xs:element name="customer_accounts">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element ref="customer_account" maxOccurs="unbounded"/>
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+</xs:schema> 
