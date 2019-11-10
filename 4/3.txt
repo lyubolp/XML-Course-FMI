@@ -1,0 +1,2 @@
+self::node()/descendant-or-self::node()/child::tracklist
+self::node()/descendant-or-self::node()/child::tracklist/attribute::num

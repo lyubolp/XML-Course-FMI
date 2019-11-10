@@ -1,0 +1,9 @@
+----------------------
+for $o in catalog/cd/tracklist
+where $o/@num = 1
+order by $o/track descending
+return $o/track
+----------------------
+
+
+

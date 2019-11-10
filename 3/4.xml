@@ -6,8 +6,7 @@
     </xs:simpleType>
     
     <xs:simpleType name="maxBalance">
-        <xs:restriction base="xs:integer">
-            <xs:maxInclusive value="5000"/>
+        ce value="5000"/>
         </xs:restriction>
     </xs:simpleType>
     

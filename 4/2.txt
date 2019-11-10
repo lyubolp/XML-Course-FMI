@@ -1,0 +1,17 @@
+/catalog/cd[attribute::id='8c0a600b']/tracklist/track[attribute::length="4:04"]
+/catalog/cd/tracklist/track[position() mod 2 = 0]
+/catalog/cd/tracklist/track[string-length(.) > 35]
+/catalog/cd/tracklist/track[string-length(.) > 15]/string-length(.)
+/catalog/cd/tracklist/track[last()]
+
+
+/catalog/cd/tracklist/track[matches(., "Ya soshla s uma")]
+/catalog/cd/tracklist/track[starts-with(., "D")]
+/catalog/cd/tracklist/track[ends-with(., "sta")]
+/catalog/cd/tracklist/track/upper-case(.)
+/catalog/cd[./tracklist/track[attribute::length="3:55" and matches(., "Robot")]]/year
+count(/catalog/cd/tracklist/track) div count(/catalog/cd)
+
+/catalog/cd/concat("Title: ", ./title, " 
+Year: ", ./year, "
+")
